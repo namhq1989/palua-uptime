@@ -1,31 +1,48 @@
-# Change these first
-owner: upptime # Your GitHub organization or username, where this repository lives
-repo: upptime # The name of this repository
+# .upptimerc.yml
+# Docs: https://upptime.js.org/docs/configuration
 
+siteName: Palua Status
+logoUrl: https://raw.githubusercontent.com/namhq1989/palua-uptime/master/logo.png
+
+introTitle: "Palua Platform Status"
+introMessage: |
+  Uptime & health monitoring cho Palua backend.
+  Cập nhật mỗi 5 phút bởi GitHub Actions.
+
+# Cấu hình chung
+allSites: true
+skipDescriptionUpdate: false
+skipTopicsUpdate: false
+skipHomepageUpdate: false
+
+# Cấu hình lịch sử & thống kê
+daysInHistogram: 90
+allTimezones: false
+showMetrics: true
+
+# Cấu hình thông báo (Slack)
+# 1. Tạo Incoming Webhook: https://my.slack.com/services/new/incoming-webhook
+# 2. Lưu vào repo Secret: UPPTIME_NOTIFICATION_SLACK
+# 3. Đổi `enabled` từ false → true
+notifications:
+  - type: slack
+    enabled: false # ← đổi thành true sau khi setup Slack webhook
+    webhookUrl: $UPPTIME_NOTIFICATION_SLACK # ← secret trong repo
+    channel: "#notification-uptime"
+    sendAs: "Upptime Bot"
+
+# Sites: 2 endpoint Palua
 sites:
-  - name: Google
-    url: https://www.google.com
-  - name: Wikipedia
-    url: https://en.wikipedia.org
-  - name: Hacker News
-    url: https://news.ycombinator.com
-  - name: Test Broken Site
-    url: https://thissitedoesnotexist.koj.co
+  # 1. App API (mobile app)
+  - name: App API
+    url: https://app-api.palua.app/health
+    expectedStatusCodes:
+      - 200
 
-status-website:
-  # Add your custom domain name, or remove the `cname` line if you don't have a domain
-  # Uncomment the `baseUrl` line if you don't have a custom domain and add your repo name there
-  cname: demo.upptime.js.org
-  # baseUrl: /your-repo-name
-  logoUrl: https://raw.githubusercontent.com/upptime/upptime.js.org/master/static/img/icon.svg
-  name: Upptime
-  introTitle: "**Upptime** is the open-source uptime monitor and status page, powered entirely by GitHub."
-  introMessage: This is a sample status page which uses **real-time** data from our [GitHub repository](https://github.com/upptime/upptime). No server required — just GitHub Actions, Issues, and Pages. [**Get your own for free**](https://github.com/upptime/upptime)
-  navbar:
-    - title: Status
-      href: /
-    - title: GitHub
-      href: https://github.com/$OWNER/$REPO
+  # 2. Admin API (admin web)
+  - name: Admin API
+    url: https://adm-api.palua.app/health
+    expectedStatusCodes:
+      - 200
 
-# Upptime also supports notifications, assigning issues, and more
-# See https://upptime.js.org/docs/configuration
+statusTypography: "updown"
