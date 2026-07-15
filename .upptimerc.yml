@@ -33,15 +33,21 @@ notifications:
     channel: "#notification-uptime"
     sendAs: "Upptime Bot"
 
-# Sites: 2 endpoint Palua
+# Sites: 3 endpoint Palua
 sites:
-  # 1. App API (mobile app)
+  # 1. Landing Page
+  - name: Landing Page
+    url: https://palua.app
+    expectedStatusCodes:
+      - 200
+
+  # 2. App API (mobile app)
   - name: App API
     url: https://app-api.palua.app/health
     expectedStatusCodes:
       - 200
 
-  # 2. Admin API (admin web)
+  # 3. Admin API (admin web)
   - name: Admin API
     url: https://adm-api.palua.app/health
     expectedStatusCodes:
