@@ -1,0 +1,38 @@
+[
+  {
+    "name": "App API",
+    "url": "https://app-api.palua.app/health",
+    "icon": "https://icons.duckduckgo.com/ip3/app-api.palua.app.ico",
+    "slug": "app-api",
+    "status": "up",
+    "uptime": "100.00%",
+    "uptimeDay": "100.00%",
+    "uptimeWeek": "100.00%",
+    "uptimeMonth": "100.00%",
+    "uptimeYear": "100.00%",
+    "time": 934,
+    "timeDay": 934,
+    "timeWeek": 934,
+    "timeMonth": 934,
+    "timeYear": 934,
+    "dailyMinutesDown": {}
+  },
+  {
+    "name": "Admin API",
+    "url": "https://adm-api.palua.app/health",
+    "icon": "https://icons.duckduckgo.com/ip3/adm-api.palua.app.ico",
+    "slug": "admin-api",
+    "status": "up",
+    "uptime": "100.00%",
+    "uptimeDay": "100.00%",
+    "uptimeWeek": "100.00%",
+    "uptimeMonth": "100.00%",
+    "uptimeYear": "100.00%",
+    "time": 836,
+    "timeDay": 836,
+    "timeWeek": 836,
+    "timeMonth": 836,
+    "timeYear": 836,
+    "dailyMinutesDown": {}
+  }
+]
