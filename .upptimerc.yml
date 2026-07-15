@@ -54,4 +54,7 @@ sites:
       - 200
 
 cname: status.palua.app
-theme: light
+
+status-website:
+  theme: light
+  baseUrl: /
