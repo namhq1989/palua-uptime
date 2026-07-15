@@ -13,8 +13,8 @@ introMessage: |
 
 # Cấu hình chung
 allSites: true
-skipDescriptionUpdate: false
-skipTopicsUpdate: false
+skipDescriptionUpdate: true
+skipTopicsUpdate: true
 skipHomepageUpdate: false
 
 # Cấu hình lịch sử & thống kê
