@@ -2,6 +2,8 @@
 # Docs: https://upptime.js.org/docs/configuration
 
 siteName: Palua Status
+owner: namhq1989
+repo: palua-uptime
 logoUrl: https://raw.githubusercontent.com/namhq1989/palua-uptime/master/logo.png
 
 introTitle: "Palua Platform Status"
